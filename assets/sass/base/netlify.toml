@@ -1,0 +1,7 @@
+[[plugins]]
+  package = "@netlify/plugin-emails"
+
+  NETLIFY_EMAILS_PROVIDER = "postmark"
+  NETLIFY_EMAILS_PROVIDER_API_KEY = "e7478243-8277-40e0-9ff0-66f3f0b0d2ad"
+  NETLIFY_EMAILS_SECRET = "5d5005f1-09e8-4234-bdbb-f482474ef8c8"
+  NETLIFY_EMAILS_DIRECTORY = "./emails"
