@@ -329,6 +329,15 @@ input, select, textarea {
 		text-align: right;
 	}
 
+	@media (max-width: 768px) {
+  #one section img {
+    width: 100vw;
+    height: 48vh;
+    object-fit: contain;
+    display: block;
+    margin-left: calc(-50vw + 50%); /* breaks out of any padding/container */
+  }
+}
 /* Row */
 
 	.row {
