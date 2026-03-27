@@ -1,15 +1,23 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Pink Glow Facial Room NJ</title>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Pink Glow Facial Room in Manasquan, NJ — luxury facials, Korean skincare, and waxing by Beauty Boss Nikki Fitzsimmons. Book your appointment today." />
+
+    <!-- Preload the LCP image so the browser discovers it immediately -->
+    <link rel="preload" as="image" href="images/pink-serum-crop.jpeg" />
+
+    <!-- Load FontAwesome async (non-render-blocking) -->
+    <link rel="preload" href="assets/css/fontawesome-all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="assets/css/fontawesome-all.min.css" /></noscript>
+
+    <!-- Main stylesheet (kept synchronous — it's small and above-fold critical) -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
     <style>
       /* ── Hero: center all text & logo ── */
       #intro .inner {
@@ -36,7 +44,7 @@
     <!-- Sidebar -->
     <section id="sidebar">
       <div class="inner">
-        <nav>
+        <nav aria-label="Page sections">
           <ul>
             <li><a href="#intro">Welcome</a></li>
             <li><a href="#one">Who we are</a></li>
@@ -47,15 +55,25 @@
       </div>
     </section>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
+    <!-- <main> landmark fixes the "Document does not have a main landmark" audit -->
+    <main id="wrapper">
 
       <!-- Intro / Hero -->
       <section id="intro" class="wrapper style1 fullscreen fade-up">
         <div class="inner">
           <h1>Beautiful skin starts here.</h1>
           <div class="main-logo">
-            <img class="logo" src="images/Pink-Glow_Logo-3.jpg" alt="Pink Glow Facial Room logo" />
+            <!--
+              TODO (image): resize from 1500x1500 to ~600x600, convert to WebP.
+              width/height attributes prevent layout shift (CLS).
+            -->
+            <img
+              class="logo"
+              src="images/Pink-Glow_Logo-3.jpg"
+              alt="Pink Glow Facial Room logo"
+              width="261"
+              height="261"
+            />
           </div>
           <p>Aesthetics &amp; Korean Skincare</p>
         </div>
@@ -66,10 +84,18 @@
 
         <!-- Book / Gift Card CTA -->
         <section>
+          <!--
+            LCP element — fetchpriority=high tells the browser to prioritise this fetch.
+            TODO (image): convert to WebP, resize to ~800px wide.
+            width/height prevent layout shift (CLS).
+          -->
           <img
             src="images/pink-serum-crop.jpeg"
             alt="Pink skincare serum"
             data-position="center center"
+            fetchpriority="high"
+            width="800"
+            height="600"
           />
           <div class="content">
             <div class="inner">
@@ -78,6 +104,7 @@
                   <a
                     class="book-button button scrolly"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://www.fresha.com/a/pink-glow-facial-room-manasquan-52a-main-street-wu7ri8ag/all-offer?menu=true&pId=614350"
                   >Book an Appointment</a>
                 </li>
@@ -85,6 +112,7 @@
                   <a
                     class="book-button button scrolly"
                     target="_blank"
+                    rel="noopener noreferrer"
                     href="https://www.fresha.com/a/pink-glow-facial-room-manasquan-52a-main-street-wu7ri8ag/gift-cards?menu=true"
                   >Purchase a Gift Card</a>
                 </li>
@@ -95,10 +123,23 @@
 
         <!-- About Pink Glow -->
         <section>
+          <!--
+            aria-label fixes "Links do not have a discernible name" audit.
+            loading="lazy" defers off-screen images.
+            TODO (image): convert about.jpg to WebP.
+          -->
           <a
             href="https://www.fresha.com/a/pink-glow-facial-room-manasquan-52-main-street-ym4u9ws3?pId=614350"
             class="image"
-          ><img src="images/about.jpg" alt="About Pink Glow" data-position="top center" /></a>
+            aria-label="Book an appointment at Pink Glow Facial Room"
+          ><img
+              src="images/about.jpg"
+              alt="About Pink Glow Facial Room"
+              data-position="top center"
+              loading="lazy"
+              width="800"
+              height="600"
+          /></a>
           <div class="content">
             <div class="inner">
               <h2>About Pink Glow</h2>
@@ -117,7 +158,15 @@
           <a
             href="https://www.fresha.com/a/pink-glow-facial-room-manasquan-52-main-street-ym4u9ws3?pId=614350"
             class="image"
-          ><img src="images/aqua-barrier.jpeg" alt="Korean skincare products" data-position="25% 25%" /></a>
+            aria-label="Book a Korean skincare facial at Pink Glow"
+          ><img
+              src="images/aqua-barrier.jpeg"
+              alt="Korean skincare products used at Pink Glow"
+              data-position="25% 25%"
+              loading="lazy"
+              width="800"
+              height="600"
+          /></a>
           <div class="content">
             <div class="inner">
               <h2>Trained Expert in Korean Skincare</h2>
@@ -138,14 +187,21 @@
           <h2>Ahohwa by PureRaum</h2>
           <p>
             <span class="image left">
+              <!--
+                960x960 displayed at 300x300.
+                TODO (image): resize to 600x600 and convert to WebP.
+              -->
               <img
                 id="pure"
                 src="images/aqua-solution.jpeg"
                 alt="Aqua solution facial products by Ahohwa Korean skincare"
+                loading="lazy"
+                width="300"
+                height="300"
               />
             </span>
             Custom Korean Skincare facials now available at Pink Glow. Ahohwa is a leading
-            medical esthetic brand used widely in Korean spas. "Deep &amp; Pure Technology"
+            medical esthetic brand used widely in Korean spas. &ldquo;Deep &amp; Pure Technology&rdquo;
             offers an anti-pollution system to deep-cleanse and refresh the skin. Korean
             beauty is all about a flawless and healthy looking glow!
           </p>
@@ -161,6 +217,7 @@
               <a
                 class="book-button button scrolly"
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.fresha.com/a/pink-glow-facial-room-manasquan-52a-main-street-wu7ri8ag/all-offer?menu=true&pId=614350"
               >Book Now</a>
             </li>
@@ -216,15 +273,19 @@
                     <li>
                       <a
                         target="_blank"
+                        rel="noopener noreferrer"
                         href="https://www.facebook.com/brilliantskinbynikki"
                         class="icon brands fa-facebook-f"
+                        aria-label="Pink Glow on Facebook"
                       ><span class="label">Facebook</span></a>
                     </li>
                     <li>
                       <a
                         target="_blank"
+                        rel="noopener noreferrer"
                         href="https://www.instagram.com/pinkglow_facialroom/"
                         class="icon brands fa-instagram"
+                        aria-label="Pink Glow on Instagram"
                       ><span class="label">Instagram</span></a>
                     </li>
                   </ul>
@@ -236,7 +297,7 @@
         </div>
       </section>
 
-    </div><!-- /wrapper -->
+    </main>
 
     <!-- Footer -->
     <footer id="footer" class="wrapper style1-alt">
@@ -247,20 +308,20 @@
             <script>document.write(new Date().getFullYear());</script>
           </li>
           <li>
-            Designed by: <a target="_blank" href="https://crafteddigital.co/">Crafted Digital</a>
+            Designed by: <a target="_blank" rel="noopener noreferrer" href="https://crafteddigital.co/">Crafted Digital</a>
           </li>
         </ul>
       </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- Scripts deferred: won't block paint or LCP -->
+    <script src="assets/js/jquery.min.js" defer></script>
+    <script src="assets/js/jquery.scrollex.min.js" defer></script>
+    <script src="assets/js/jquery.scrolly.min.js" defer></script>
+    <script src="assets/js/browser.min.js" defer></script>
+    <script src="assets/js/breakpoints.min.js" defer></script>
+    <script src="assets/js/util.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 
   </body>
 </html>
