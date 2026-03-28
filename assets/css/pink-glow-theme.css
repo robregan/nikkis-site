@@ -1,0 +1,363 @@
+/* =============================================================
+   Pink Glow Facial Room — Theme Override
+   Drop this AFTER main.css in index.html:
+   <link rel="stylesheet" href="assets/css/pink-glow-theme.css" />
+   ============================================================= */
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap');
+
+/* ── Palette ── */
+:root {
+  --pg-warm-white:   #fdfaf8;
+  --pg-champagne:    #f9f3ee;
+  --pg-blush:        #f5e6e0;
+  --pg-blush-mid:    #ead5cc;
+  --pg-blush-dark:   #c8a099;
+  --pg-rose:         #b87265;
+  --pg-rose-dark:    #8f4f45;
+  --pg-mauve:        #6b3d4a;      /* deep blush/mauve for contact section */
+  --pg-stone:        #4a3c39;
+  --pg-ink:          #2e1f1c;
+  --pg-muted:        #9e8680;
+}
+
+/* =============================================================
+   BASE TYPOGRAPHY
+   ============================================================= */
+
+body,
+input,
+textarea,
+select,
+button {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  color: var(--pg-stone);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  color: var(--pg-ink);
+  line-height: 1.15;
+}
+
+p {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--pg-stone);
+}
+
+/* Slightly larger body text on desktop only */
+@media screen and (min-width: 980px) {
+  p {
+    font-size: 1.08rem;
+  }
+  #one p,
+  #two p,
+  #three p {
+    font-size: 1.08rem;
+  }
+}
+
+/* Nav links */
+#sidebar nav ul li a {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--pg-blush-dark);
+}
+
+#sidebar nav ul li a:hover,
+#sidebar nav ul li a.active {
+  color: #fff;
+}
+
+/* =============================================================
+   SIDEBAR
+   ============================================================= */
+
+#sidebar {
+  background: var(--pg-ink);
+  border-right: 1px solid rgba(200, 160, 153, 0.15);
+}
+
+#sidebar .inner {
+  padding: 2.5rem 2rem;
+}
+
+/* =============================================================
+   HERO — SECTION #intro
+   ============================================================= */
+
+#intro {
+  background-color: var(--pg-warm-white) !important;
+}
+
+/* "Beautiful skin" headline — large editorial serif */
+#intro h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-weight: 300;
+  color: var(--pg-ink);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* Italic "starts here." — wrap that phrase in <em> in the HTML */
+#intro h1 em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--pg-rose);
+}
+
+/* "Aesthetics & Korean Skincare" tagline */
+#intro p {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pg-muted);
+  font-weight: 400;
+}
+
+/* =============================================================
+   SECTION ONE — spotlights
+   ============================================================= */
+
+/* Alternating spotlight backgrounds */
+#one.wrapper.style2 {
+  background: var(--pg-champagne) !important;
+}
+
+#one section:nth-child(even) {
+  background: var(--pg-blush) !important;
+}
+
+#one section:nth-child(odd) {
+  background: var(--pg-champagne) !important;
+}
+
+#one h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.9rem, 2.8vw, 2.6rem);
+  font-weight: 300;
+  color: var(--pg-ink);
+  margin-bottom: 0.75rem;
+}
+
+#one p {
+  color: var(--pg-stone);
+  font-weight: 300;
+  font-size: 1.05rem;
+}
+
+/* =============================================================
+   SECTION TWO — Ahohwa / What we do
+   ============================================================= */
+
+#two.wrapper.style3 {
+  background: var(--pg-blush) !important;
+}
+
+#two h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.9rem, 2.8vw, 2.6rem);
+  font-weight: 300;
+  color: var(--pg-ink);
+  margin-bottom: 1rem;
+}
+
+#two p {
+  color: var(--pg-stone);
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+/* =============================================================
+   SECTION THREE — Contact
+   ============================================================= */
+
+#three.wrapper.style1 {
+  background: var(--pg-mauve) !important;
+}
+
+#three h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.9rem, 2.8vw, 2.6rem);
+  font-weight: 300;
+  color: var(--pg-blush) !important;
+  margin-bottom: 1.25rem;
+}
+
+#three p,
+#three span,
+#three label {
+  color: var(--pg-blush-mid) !important;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+#three a {
+  color: var(--pg-blush-dark) !important;
+  border-bottom: 1px solid rgba(200, 160, 153, 0.3);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+#three a:hover {
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Contact info headings (Address, Email, Phone, Social) */
+#three .contact li h3 {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--pg-blush-dark) !important;
+  border-bottom: 1px solid rgba(200, 160, 153, 0.2);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Form fields */
+#three input[type="text"],
+#three input[type="email"],
+#three textarea {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(200, 160, 153, 0.3) !important;
+  color: #fff !important;
+  border-radius: 2px !important;
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+#three input[type="text"]::placeholder,
+#three input[type="email"]::placeholder,
+#three textarea::placeholder {
+  color: rgba(200, 160, 153, 0.5) !important;
+}
+
+#three input[type="text"]:focus,
+#three input[type="email"]:focus,
+#three textarea:focus {
+  border-color: rgba(200, 160, 153, 0.6) !important;
+}
+
+/* Social icon links in contact */
+#three .icons a {
+  border-bottom: none !important;
+  color: var(--pg-blush-dark) !important;
+}
+
+#three .icons a:hover {
+  color: #fff !important;
+}
+
+/* =============================================================
+   BUTTONS
+   ============================================================= */
+
+.button,
+a.button,
+button.button {
+  font-family: 'Jost', sans-serif !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+  font-weight: 400 !important;
+  border-radius: 2px !important;
+  transition: background 0.25s, color 0.25s, border-color 0.25s !important;
+}
+
+/* Primary filled button */
+.button.primary,
+#intro .button,
+#one .button,
+#three .button.submit {
+  background: var(--pg-rose) !important;
+  border-color: var(--pg-rose) !important;
+  color: #fff !important;
+}
+
+.button.primary:hover,
+#intro .button:hover,
+#one .button:hover,
+#three .button.submit:hover {
+  background: var(--pg-rose-dark) !important;
+  border-color: var(--pg-rose-dark) !important;
+}
+
+/* Outline style for secondary buttons */
+.button.scrolly,
+a.book-button {
+  background: transparent !important;
+  border: 1px solid var(--pg-rose) !important;
+  color: var(--pg-rose) !important;
+}
+
+.button.scrolly:hover,
+a.book-button:hover {
+  background: var(--pg-rose) !important;
+  color: #fff !important;
+}
+
+/* =============================================================
+   FOOTER
+   ============================================================= */
+
+#footer.wrapper.style1-alt {
+  background: var(--pg-ink) !important;
+  border-top: 1px solid rgba(200, 160, 153, 0.1);
+}
+
+#footer .menu li {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--pg-muted);
+}
+
+#footer .menu li a {
+  color: var(--pg-blush-dark);
+  border-bottom: none;
+}
+
+#footer .menu li a:hover {
+  color: #fff;
+}
+
+/* =============================================================
+   SECTION WRAPPER ACCENT OVERRIDES
+   (Hyperspace uses gradient overlays on style1/style2/style3)
+   ============================================================= */
+
+/* style1 used in hero + contact — warm white base */
+.wrapper.style1 {
+  background-color: var(--pg-warm-white);
+}
+
+/* style2 used in spotlights */
+.wrapper.style2 {
+  background-color: var(--pg-champagne);
+}
+
+/* style3 used in Ahohwa section */
+.wrapper.style3 {
+  background-color: var(--pg-blush);
+}
+
+/* style1-alt used in footer */
+.wrapper.style1-alt {
+  background-color: var(--pg-ink);
+}
