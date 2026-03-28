@@ -188,7 +188,42 @@ p {
    SECTION ONE — spotlights
    ============================================================= */
 
-/* Alternating spotlight backgrounds */
+/* Remove default border/padding from spotlight images */
+#one section img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Cap the first spotlight (serum/buttons section) height on desktop */
+@media screen and (min-width: 980px) {
+  #one section:first-child {
+    max-height: 480px;
+    overflow: hidden;
+    line-height: 0;
+    font-size: 0;
+  }
+  #one section:first-child img {
+    height: 480px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    vertical-align: bottom;
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+  #one section:first-child .content {
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+}
 #one.wrapper.style2 {
   background: var(--pg-champagne) !important;
 }
