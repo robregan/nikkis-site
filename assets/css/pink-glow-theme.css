@@ -98,33 +98,90 @@ p {
 
 #intro {
   background-color: var(--pg-warm-white) !important;
+  background-image: none !important;
 }
 
-/* "Beautiful skin" headline — large editorial serif */
+#intro .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+/* Logo — leads the hero, big and proud */
+#intro .main-logo {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 2.2rem;
+  order: -1;
+}
+
+#intro .main-logo .logo {
+  width: clamp(220px, 65vw, 340px);
+  height: auto;
+  display: block;
+}
+
+/* Thin decorative rule above headline */
+#intro h1::before {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--pg-blush-dark);
+  margin: 0 auto 1.4rem;
+}
+
+/* "Beautiful skin starts here" headline */
 #intro h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-size: clamp(2.6rem, 8vw, 4.2rem);
   font-weight: 300;
   color: var(--pg-ink);
   line-height: 1.1;
   letter-spacing: -0.02em;
+  margin-bottom: 0;
 }
 
-/* Italic "starts here." — wrap that phrase in <em> in the HTML */
+/* "starts here" drops to its own line and goes rose italic */
 #intro h1 em {
   font-style: italic;
   font-weight: 300;
   color: var(--pg-rose);
+  display: block;
+}
+
+/* Thin decorative rule below headline, above tagline */
+#intro h1::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--pg-blush-dark);
+  margin: 1.4rem auto 0;
 }
 
 /* "Aesthetics & Korean Skincare" tagline */
 #intro p {
   font-family: 'Jost', sans-serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.22em;
+  font-size: 0.75rem;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--pg-muted);
   font-weight: 400;
+  margin-top: 1.4rem;
+}
+
+/* Desktop: tighten logo, more breathing room */
+@media screen and (min-width: 980px) {
+  #intro .inner {
+    padding: 5rem 3rem;
+  }
+  #intro .main-logo .logo {
+    width: clamp(240px, 28vw, 320px);
+  }
 }
 
 /* =============================================================
