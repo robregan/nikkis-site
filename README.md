@@ -70,17 +70,3 @@ Since this is a static site, no build process is required to view it locally.
 If you are editing SCSS styles, compile them to CSS using your preferred SCSS compiler (e.g. the VS Code Live Sass Compiler extension or the `sass` CLI).
 
 ---
-
-## Client Info
-
-|               |                                                                        |
-| ------------- | ---------------------------------------------------------------------- |
-| **Business**  | Pink Glow Facial Room                                                  |
-| **Owner**     | Nikki Fitzsimmons                                                      |
-| **Location**  | 52A Main Street, Manasquan, NJ 08736                                   |
-| **Email**     | info@pinkglowfacialroom.com                                            |
-| **Phone**     | (732) 768-1769                                                         |
-| **Instagram** | [@pinkglow_facialroom](https://www.instagram.com/pinkglow_facialroom/) |
-| **Facebook**  | [brilliantskinbynikki](https://www.facebook.com/brilliantskinbynikki)  |
-
----
