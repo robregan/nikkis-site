@@ -25,12 +25,12 @@ This is a static website designed and developed by [Crafted Digital](https://cra
 
 ## Tech Stack
 
-| Technology | Usage |
-|---|---|
-| HTML5 | Page structure and markup |
-| CSS3 | Styling and layout |
-| SCSS | CSS preprocessor / source styles |
-| JavaScript | UI interactions and behavior |
+| Technology | Usage                            |
+| ---------- | -------------------------------- |
+| HTML5      | Page structure and markup        |
+| CSS3       | Styling and layout               |
+| SCSS       | CSS preprocessor / source styles |
+| JavaScript | UI interactions and behavior     |
 
 No frameworks or build tools are required to run the site. It is a fully static site that can be served from any web host.
 
@@ -57,6 +57,7 @@ nikkis-site/
 Since this is a static site, no build process is required to view it locally.
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/robregan/nikkis-site.git
    ```
@@ -72,22 +73,14 @@ If you are editing SCSS styles, compile them to CSS using your preferred SCSS co
 
 ## Client Info
 
-| | |
-|---|---|
-| **Business** | Pink Glow Facial Room |
-| **Owner** | Nikki Fitzsimmons |
-| **Location** | 52A Main Street, Manasquan, NJ 08736 |
-| **Email** | info@pinkglowfacialroom.com |
-| **Phone** | (732) 768-1769 |
+|               |                                                                        |
+| ------------- | ---------------------------------------------------------------------- |
+| **Business**  | Pink Glow Facial Room                                                  |
+| **Owner**     | Nikki Fitzsimmons                                                      |
+| **Location**  | 52A Main Street, Manasquan, NJ 08736                                   |
+| **Email**     | info@pinkglowfacialroom.com                                            |
+| **Phone**     | (732) 768-1769                                                         |
 | **Instagram** | [@pinkglow_facialroom](https://www.instagram.com/pinkglow_facialroom/) |
-| **Facebook** | [brilliantskinbynikki](https://www.facebook.com/brilliantskinbynikki) |
+| **Facebook**  | [brilliantskinbynikki](https://www.facebook.com/brilliantskinbynikki)  |
 
 ---
-
-## License
-
-This project is licensed under the [Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/). See `LICENSE.txt` for full details.
-
----
-
-*Designed & developed by [Crafted Digital](https://crafteddigital.co/)*
